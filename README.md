@@ -1,4 +1,4 @@
-d<div align="center">
+<div align="center">
 
 # CARLA-Autoware-Bridge - Enables the use of CARLA for Testing and Development of Autoware Core/Universe
 [![Linux](https://img.shields.io/badge/os-ubuntu24.04-blue.svg)](https://www.linux.org/)
