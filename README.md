@@ -64,34 +64,34 @@ Install using App center
      if problems with xdg run:
      xhost local:root
 
-### Install docker
-https://docs.docker.com/engine/install/ubuntu/
+### Install 
+https://docs..com/engine/install/ubuntu/
 ```bash
-# Add Docker's official GPG key:
+# Add 's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo curl -fsSL https://download..com/linux/ubuntu/gpg -o /etc/apt/keyrings/.asc
+sudo chmod a+r /etc/apt/keyrings/.asc
 
 # Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/.asc] https://download..com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo tee /etc/apt/sources.list.d/.list > /dev/null
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -ce -ce-cli containerd.io -buildx-plugin -compose-plugin
 ```
 
 Fixing sudo's problem
 ```bash
-sudo groupadd -f docker
-sudo usermod -a docker $USER
+sudo groupadd -f 
+sudo usermod -aG docker $USER
 ```
 Logout from system and log in
 
 
-### Install Nvidia docker toolkit
+### Install Nvidia  toolkit
 
 [Nvidia docker toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 ```bash
@@ -226,7 +226,7 @@ rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_S
 
 Inside docker
 ```bash
-cd /home/ads/Carla-Autoware-Bridge/autoware
+cd /home/dr-b/Carla-Autoware-Bridge/autoware
 mkdir src
 vcs import src < autoware.repos
 cd src
@@ -290,12 +290,12 @@ docker run -it -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp --network=host tumgeka/c
 ros2 launch carla_autoware_bridge carla_aw_bridge.launch.py  town:=Town10HD timeout:=500
 
 # Start the autoware docker
-rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_SOFTWARE=1 --x11 --nvidia --volume /home/student/Carla-Autoware-Bridge -- ghcr.io/autowarefoundation/autoware:humble-2024.01-cuda-amd64
+rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_SOFTWARE=1 --x11 --nvidia --volume /home/dr-b/Carla-Autoware-Bridge -- ghcr.io/autowarefoundation/autoware:humble-2024.01-cuda-amd64
 
 # Inside autoware container
-cd /home/student/Carla-Autoware-Bridge/autoware
+cd /home/dr-b/Carla-Autoware-Bridge/autoware
 source install/setup.bash
-ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=carla_t2_vehicle sensor_model:=carla_t2_sensor_kit map_path:=/home/student/Carla-Autoware-Bridge/Town10
+ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=carla_t2_vehicle sensor_model:=carla_t2_sensor_kit map_path:=/home/dr-b/Carla-Autoware-Bridge/Town10
 
 ```
 
