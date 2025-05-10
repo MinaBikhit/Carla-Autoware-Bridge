@@ -221,7 +221,7 @@ rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_S
 ```
 In my case something like that:
 ```bash
-rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_SOFTWARE=1 --x11 --nvidia --volume /home/ads/Carla-Autoware-Bridge/ -- ghcr.io/autowarefoundation/autoware:humble-2024.01-cuda-amd64
+rocker --network=host -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -e LIBGL_ALWAYS_SOFTWARE=1 --x11 --nvidia --volume /home/dr-b/Carla-Autoware-Bridge/ -- ghcr.io/autowarefoundation/autoware:humble-2024.01-cuda-amd64
 ```
 
 Inside docker
