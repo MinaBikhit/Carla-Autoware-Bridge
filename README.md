@@ -190,7 +190,7 @@ docker pull ghcr.io/autowarefoundation/autoware:humble-2024.01-cuda-amd64
 
 Go to home directory and open terminal
 ```
-git clone https://github.com/PanHassan/Carla-Autoware-Bridge.git
+git clone https://github.com/MinaBikhit/Carla-Autoware-Bridge.git
 ```
 cd Carla-Autoware-Bridge/
 ```
